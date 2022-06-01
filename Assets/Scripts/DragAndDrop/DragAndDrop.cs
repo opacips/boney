@@ -6,6 +6,7 @@ public class DragAndDrop : MonoBehaviour
 {
     public bool dragging = false;
     [SerializeField] private Rigidbody2D blockRB;
+    [SerializeField] private Collider2D blockCollider;
 
     void Update()
     {
@@ -32,7 +33,7 @@ public class DragAndDrop : MonoBehaviour
             {
                 if (hit.collider.gameObject == gameObject)
                 {
-                    
+
                     this.dragging = true;
                 }
             }
@@ -42,7 +43,7 @@ public class DragAndDrop : MonoBehaviour
         {
             blockRB.constraints = RigidbodyConstraints2D.FreezeAll;
             blockRB.mass = 100f;
-            
+
             if (this.dragging)
             {
                 this.dragging = false;
@@ -53,11 +54,10 @@ public class DragAndDrop : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision);
-        this.GetComponent<Collider2D>().isTrigger = false;
+
         if (collision.gameObject != gameObject)
-        { 
+        {
             this.dragging = false;
         }
-
     }
 }

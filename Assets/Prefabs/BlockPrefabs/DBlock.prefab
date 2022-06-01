@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 9180194698756107628}
   - component: {fileID: 9209193861048809262}
   - component: {fileID: 8681565918285627162}
-  m_Layer: 0
-  m_Name: blocks_1
+  - component: {fileID: -560290955573217304}
+  m_Layer: 6
+  m_Name: DBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,14 +104,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 1}
+    oldSize: {x: 2, y: 0.5}
     newSize: {x: 4, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 1}
+  m_Size: {x: 2, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &8681565918285627162
 Rigidbody2D:
@@ -132,4 +133,19 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &-560290955573217304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966771737826235789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ad7da291ed74b43a8eb2db798cef04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragging: 0
+  blockRB: {fileID: 8681565918285627162}
+  blockCollider: {fileID: 9209193861048809262}
