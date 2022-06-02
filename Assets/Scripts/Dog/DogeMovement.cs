@@ -20,6 +20,12 @@ public class DogeMovement : MonoBehaviour
 
     private float horizontalInput;
 
+
+    private void Start()
+    {
+        animator.SetFloat("horizontalMovement", 1f);
+    }
+
     private void Update()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
