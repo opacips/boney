@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f61da251b8d984da100aedf1f611c3, type: 3}
   m_Name: ColumnData
   m_EditorClassIdentifier: 
-  blockSprite: {fileID: -691146275, guid: f56b1bf37194adc45a07a84abc25cddc, type: 3}
-  blockPrefab: {fileID: 5890502942992068819, guid: eaccde9aaa8229841a7c7ed2a400eeec, type: 3}
+  blockSprite: {fileID: 757499145, guid: 73f058fc403e9b243b94c3afc5f69823, type: 3}
+  blockPrefab: {fileID: 7380945400099011616, guid: 3705fb26bcfc52d4f917b93015ee179d, type: 3}
   blockName: ColumnBlock

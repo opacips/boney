@@ -25,6 +25,10 @@ namespace Assets.Scripts.SpawnBlock
                         Instantiate(blockData.blockPrefab, spawnPoint, Quaternion.identity);
                         MaxClick--;
                         break;
+                    case "TZBlock":
+                        Instantiate(blockData.blockPrefab, spawnPoint, Quaternion.identity);
+                        MaxClick--;
+                        break;
                     case "SquareBlock":
                         Instantiate(blockData.blockPrefab, spawnPoint, Quaternion.identity);
                         MaxClick--;
