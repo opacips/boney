@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -31,18 +32,23 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    private void Resume()
+    public void Resume()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
-    private void Pause()
+    public void Pause()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+
+    public void RestartScene()
+    {
+        StartCoroutine(RestartTime(.5f));    
     }
 
     public void SaveAndExit()
@@ -57,5 +63,15 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
 #endif
     }
+
+    private IEnumerator RestartTime(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
+        Debug.Log("Waited seconds: " + Time.time);
+    }
+
+    
 }
 
