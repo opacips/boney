@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f61da251b8d984da100aedf1f611c3, type: 3}
+  m_Name: TZBlockData
+  m_EditorClassIdentifier: 
+  blockSprite: {fileID: -1549286494, guid: 73f058fc403e9b243b94c3afc5f69823, type: 3}
+  blockPrefab: {fileID: 389297987589808780, guid: 1e2d7942156686b4099c9ea744b56048, type: 3}
+  blockName: TZBlock
