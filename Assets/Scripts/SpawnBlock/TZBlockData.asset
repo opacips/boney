@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7f61da251b8d984da100aedf1f611c3, type: 3}
-  m_Name: SquareBlockData
+  m_Name: TZBlockData
   m_EditorClassIdentifier: 
-  blockSprite: {fileID: 415106590, guid: 73f058fc403e9b243b94c3afc5f69823, type: 3}
-  blockPrefab: {fileID: 344335203818161219, guid: a53079e3eac5d2f4f81e5b566506712d, type: 3}
-  blockName: SquareBlock
+  blockSprite: {fileID: -1549286494, guid: 73f058fc403e9b243b94c3afc5f69823, type: 3}
+  blockPrefab: {fileID: 389297987589808780, guid: 1e2d7942156686b4099c9ea744b56048, type: 3}
+  blockName: TZBlock
