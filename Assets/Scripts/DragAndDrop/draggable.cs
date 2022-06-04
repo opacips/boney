@@ -24,10 +24,9 @@ public class draggable : MonoBehaviour
     {
         if (isDragged)
         {
-            transform.localPosition = spriteDragStartPos + (Camera.main.ScreenToWorldPoint(Input.mousePosition) - mouseDragStartPos);
-
+            transform.localPosition=spriteDragStartPos+(Camera.main.ScreenToWorldPoint(Input.mousePosition)-mouseDragStartPos);
+            Debug.Log(Input.mousePosition);
         }
-
     }
     private void OnMouseUp()
     {

@@ -30,7 +30,7 @@ public class DogeMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
             if(isGrounded)
             {
@@ -67,13 +67,13 @@ public class DogeMovement : MonoBehaviour
             rayColor = Color.blue;
             isGrounded = true;
 
-            Debug.Log("Hits the Ground " + groundLayer);
+//            Debug.Log("Hits the Ground " + groundLayer);
         }
         else
         {
             isGrounded = false;
 
-            Debug.Log("Doesn't hit any layer");
+//            Debug.Log("Doesn't hit any layer");
             rayColor = Color.red;
         }
 
