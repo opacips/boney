@@ -20,10 +20,16 @@ public class DogeMovement : MonoBehaviour
 
     private float horizontalInput;
 
+    public GameObject tutorialPanel;
+    public GameObject tutorialPanel2;
+
 
     private void Start()
     {
         animator.SetFloat("horizontalMovement", 1f);
+        Time.timeScale = 0f;
+        tutorialPanel2.SetActive(false);
+        tutorialPanel.SetActive(true);
     }
 
     private void Update()
@@ -129,5 +135,18 @@ public class DogeMovement : MonoBehaviour
             animator.SetBool("isJumpingLeft", false);
         }
 
+    }
+
+    public void InvisibleTutorialButton()
+    {
+        tutorialPanel.SetActive(false);
+        Time.timeScale = 1f;
+        tutorialPanel2.SetActive(true);
+    }
+
+    public void InvisibleTutorialButton2()
+    {
+        tutorialPanel2.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
