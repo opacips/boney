@@ -73,13 +73,13 @@ public class DogeMovement : MonoBehaviour
             rayColor = Color.blue;
             isGrounded = true;
 
-            Debug.Log("Hits the Ground " + groundLayer);
+//            Debug.Log("Hits the Ground " + groundLayer);
         }
         else
         {
             isGrounded = false;
 
-            Debug.Log("Doesn't hit any layer");
+//            Debug.Log("Doesn't hit any layer");
             rayColor = Color.red;
         }
 

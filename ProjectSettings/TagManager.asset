@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DropArea
   - block
+  - ball
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 61200405
+    locked: 0
+  - name: Midground
+    uniqueID: 1433619539
+    locked: 0
+  - name: Foreground
+    uniqueID: 2997014609
     locked: 0
