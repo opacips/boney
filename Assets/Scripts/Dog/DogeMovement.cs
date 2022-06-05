@@ -16,20 +16,12 @@ public class DogeMovement : MonoBehaviour
     public bool isMoving;
     public bool isGrounded;
     public bool canDoubleJump;
-    
 
     private float horizontalInput;
-
-    public GameObject tutorialPanel;
-    public GameObject tutorialPanel2;
-
 
     private void Start()
     {
         animator.SetFloat("horizontalMovement", 1f);
-        Time.timeScale = 0f;
-        tutorialPanel2.SetActive(false);
-        tutorialPanel.SetActive(true);
     }
 
     private void Update()
@@ -73,13 +65,13 @@ public class DogeMovement : MonoBehaviour
             rayColor = Color.blue;
             isGrounded = true;
 
-//            Debug.Log("Hits the Ground " + groundLayer);
+            // Debug.Log("Hits the Ground " + groundLayer);
         }
         else
         {
             isGrounded = false;
 
-//            Debug.Log("Doesn't hit any layer");
+            // Debug.Log("Doesn't hit any layer");
             rayColor = Color.red;
         }
 
@@ -134,19 +126,5 @@ public class DogeMovement : MonoBehaviour
             animator.SetBool("isJumpingRight", false);
             animator.SetBool("isJumpingLeft", false);
         }
-
-    }
-
-    public void InvisibleTutorialButton()
-    {
-        tutorialPanel.SetActive(false);
-        Time.timeScale = 1f;
-        tutorialPanel2.SetActive(true);
-    }
-
-    public void InvisibleTutorialButton2()
-    {
-        tutorialPanel2.SetActive(false);
-        Time.timeScale = 1f;
     }
 }

@@ -43,7 +43,6 @@ public class DragAndDrop : MonoBehaviour
         {
             blockRB.constraints = RigidbodyConstraints2D.FreezeAll;
             blockRB.mass = 100f;
-            blockRB.gravityScale = 1; //this line
 
             if (this.dragging)
             {

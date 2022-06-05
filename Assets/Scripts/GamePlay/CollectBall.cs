@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CollectBall : MonoBehaviour
 {
-//    public GameObject player;
     public bool hasBall = false;
     public GameObject dog;
     public GameObject balldog;
@@ -17,7 +16,6 @@ public class CollectBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("intrigger");
         if (other.gameObject.CompareTag("ball"))
         {
             Destroy(other.gameObject);
@@ -25,11 +23,5 @@ public class CollectBall : MonoBehaviour
             dog.gameObject.SetActive(false);
             balldog.gameObject.SetActive(true);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
