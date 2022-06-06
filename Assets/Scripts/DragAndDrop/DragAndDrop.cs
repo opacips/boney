@@ -5,8 +5,14 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
     public bool dragging = false;
+    public bool canDrag;
     [SerializeField] private Rigidbody2D blockRB;
     [SerializeField] private Collider2D blockCollider;
+
+    private void Start()
+    {
+        canDrag = true;
+    }
 
     void Update()
     {
@@ -23,8 +29,9 @@ public class DragAndDrop : MonoBehaviour
 
     private void CheckForClicks()
     {
+        
         //if left click down
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canDrag)
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
@@ -35,6 +42,8 @@ public class DragAndDrop : MonoBehaviour
                 {
 
                     this.dragging = true;
+                    
+                   
                 }
             }
         }
@@ -43,10 +52,11 @@ public class DragAndDrop : MonoBehaviour
         {
             blockRB.constraints = RigidbodyConstraints2D.FreezeAll;
             blockRB.mass = 100f;
-
+            canDrag = false;
             if (this.dragging)
             {
                 this.dragging = false;
+                
             }
         }
     }
