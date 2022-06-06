@@ -13,7 +13,7 @@ public class RestartLevel : MonoBehaviour
     public GameObject ballStartPoint;
 
     public GameObject gameOverMenu;
-
+  
     private void Update()
     {
         Time.timeScale = 1f;
@@ -23,7 +23,7 @@ public class RestartLevel : MonoBehaviour
             Time.timeScale = 0;
         }
         
-       
+   
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -35,10 +35,16 @@ public class RestartLevel : MonoBehaviour
             Player.transform.position = startPoint.transform.position;
 
             HealthManager.Instance.health--;
-         
-
-            Instantiate(ball, ballStartPoint.transform.position, Quaternion.identity);
             AudioManager.Instance.PlaySound(AudioManager.Instance.audioData.failSound);
+            SpawnBall();
+
+
+
         }
+    }
+
+    private void SpawnBall()
+    {
+        Instantiate(ball, ballStartPoint.transform.position, Quaternion.identity);
     }
 }
