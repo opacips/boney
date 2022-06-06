@@ -19,6 +19,8 @@ public class RestartLevel : MonoBehaviour
             balldog.gameObject.SetActive(false);
             dog.gameObject.SetActive(true);
             Player.transform.position = startPoint.transform.position;
+
+            AudioManager.Instance.PlaySound(AudioManager.Instance.audioData.failSound);
         }
     }
 }
