@@ -10,15 +10,20 @@ public class RestartLevel : MonoBehaviour
     public GameObject dog;
     public GameObject balldog;
     public GameObject ball;
-    //private Vector3 ballStartPoint;
     public GameObject ballStartPoint;
 
+    public GameObject gameOverMenu;
 
-    public Image[] hearts;
-
-    private void Start()
+    private void Update()
     {
-        //ballStartPoint = ball.transform.position;
+        Time.timeScale = 1f;
+        if (HealthManager.Instance.health <= 0)
+        {
+            gameOverMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+        
+       
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -28,6 +33,10 @@ public class RestartLevel : MonoBehaviour
             balldog.gameObject.SetActive(false);
             dog.gameObject.SetActive(true);
             Player.transform.position = startPoint.transform.position;
+
+            HealthManager.Instance.health--;
+         
+
             Instantiate(ball, ballStartPoint.transform.position, Quaternion.identity);
             AudioManager.Instance.PlaySound(AudioManager.Instance.audioData.failSound);
         }
