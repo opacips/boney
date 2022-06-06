@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RestartLevel : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class RestartLevel : MonoBehaviour
     public GameObject Player;
     public GameObject dog;
     public GameObject balldog;
-    
+
+    public Image[] hearts;
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Respawn"))
