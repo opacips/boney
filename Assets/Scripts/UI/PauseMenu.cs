@@ -13,6 +13,16 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject restartMenu;
+    [SerializeField] private GameObject exitMenu;
+
+    
+    private void Start()
+    {
+        pauseMenu.SetActive(false);
+        restartMenu.SetActive(false);
+        exitMenu.SetActive(false);
+    }
 
 
     private void Update()
@@ -39,6 +49,20 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
+    public void ResumeR()
+    {
+        restartMenu.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
+    public void ResumeE()
+    {
+        exitMenu.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -46,9 +70,25 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
+    public void clickRestart()
+    {
+        restartMenu.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    public void clickExit()
+    {
+        exitMenu.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
     public void RestartScene()
     {
-        StartCoroutine(RestartTime(.5f));    
+        restartMenu.SetActive(false);
+        StartCoroutine(RestartTime(.5f)); 
+        Time.timeScale = 1f;
     }
 
     public void SaveAndExit()
@@ -74,4 +114,3 @@ public class PauseMenu : MonoBehaviour
 
     
 }
-

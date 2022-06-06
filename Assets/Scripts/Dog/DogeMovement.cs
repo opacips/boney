@@ -88,6 +88,7 @@ public class DogeMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         isGrounded = false;
+        AudioManager.Instance.PlaySound(AudioManager.Instance.audioData.jumpSound);
     }
 
     private void SetAnimations()

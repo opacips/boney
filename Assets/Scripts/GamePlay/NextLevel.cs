@@ -16,6 +16,8 @@ public class NextLevel : MonoBehaviour
             balldog.gameObject.SetActive(false);
             dog.gameObject.SetActive(true);
             SceneManager.LoadScene(nextSceneIndex);
+
+            AudioManager.Instance.PlaySound(AudioManager.Instance.audioData.congratsSound);
         }
     }
 }

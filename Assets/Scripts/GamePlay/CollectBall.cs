@@ -22,6 +22,8 @@ public class CollectBall : MonoBehaviour
             hasBall = true;
             dog.gameObject.SetActive(false);
             balldog.gameObject.SetActive(true);
+
+            AudioManager.Instance.PlaySound(AudioManager.Instance.audioData.collectSound);
         }
     }
 }
